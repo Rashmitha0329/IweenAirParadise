@@ -67,8 +67,7 @@ public class TC_1_SeartchToBooking extends baseClass {
             // Login page object
             LoginPage loginPage = new LoginPage(driver);
             SearchPage SearchPage = new SearchPage(driver);
-            System.out.println("hi megha i love u");
-   		
+           
             logger.info("******** TestCase1: testLogin completed successfully ********");
 
         } catch (Exception e) {
