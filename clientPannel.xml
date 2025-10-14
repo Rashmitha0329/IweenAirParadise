@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="iween Test Suite" thread-count="3" parallel="classes">
+    <parameter name="os" value="Windows" />
+    <parameter name="browser" value="chrome" />
+
+    <listeners>
+        <listener class-name="com.iween.utilities.ExtentReportManager" />
+    </listeners>
+
+    <test name="Onway Tests">
+        <!--parameter name="os" value="Windows" />
+        <parameter name="browser" value="chrome" /-->
+        <classes>
+          <class name="com.iween.AirParadiseSearchToBooking.TC_1_SeartchToBooking"/>
+            
+        </classes>
+    </test>
+</suite> <!-- Suite -->

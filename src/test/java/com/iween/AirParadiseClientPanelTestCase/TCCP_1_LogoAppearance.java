@@ -1,31 +1,23 @@
+package com.iween.AirParadiseClientPanelTestCase;
 
-package com.iween.AirParadiseSearchToBooking;
-
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeoutException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.iween.pageObject.LoginPage;
+import com.iween.pageObject.SearchPage;
 import com.iween.testBase.baseClass;
 import com.iween.utilities.DataProviders;
 import com.iween.utilities.ExtentManager;
 import com.iween.utilities.Iween_FutureDates;
 import com.iween.utilities.Retry;
-import com.iween.utilities.ScreenshotUtil;
-import com.iween.pageObject.LoginPage;
-import com.iween.pageObject.SearchPage;
 
 
-public class TC_1_SeartchToBooking extends baseClass {
+
+
+public class TCCP_1_LogoAppearance extends baseClass {
 
     @Test(dataProvider = "excelData", dataProviderClass = DataProviders.class, retryAnalyzer = Retry.class)
     public void myTest(Map<String, String> excelTestData) throws Exception {
@@ -59,14 +51,18 @@ public class TC_1_SeartchToBooking extends baseClass {
    	        test.log(Status.INFO, "AdultsCounts: " + adultsCounts + ", ChildrenCount: " + childCount + ", InfantsCount: " + infantsCount);
    	 
    	    test.log(Status.INFO, "Flight OnWardDate:" +" "+date30.day+" "+fromMonthYear);
-     		
-
-
+     
     		
-
             // Login page object
             LoginPage loginPage = new LoginPage(driver);
             SearchPage SearchPage = new SearchPage(driver);
+            
+           loginPage.validateLogoInLoginPage(test);
+            
+            loginPage.validateLoginPageIsDisplayed(test);
+
+            // Perform login using values from properties file
+            loginPage.UserLogin(p.getProperty("username"), p.getProperty("password"));
            
    		
             logger.info("******** TestCase1: testLogin completed successfully ********");
@@ -76,10 +72,7 @@ public class TC_1_SeartchToBooking extends baseClass {
             test.fail("Test failed with exception: " + e.getMessage());
             throw e;  // Re-throw to ensure Retry works properly
         }
-    }
     
-    
-    
-    
-
+	
+}
 }
