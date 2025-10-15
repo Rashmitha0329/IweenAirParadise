@@ -22,10 +22,11 @@ import com.iween.utilities.Iween_FutureDates;
 import com.iween.utilities.Retry;
 import com.iween.utilities.ScreenshotUtil;
 import com.iween.pageObject.LoginPage;
-import com.iween.pageObject.HomePage;
 
+import com.iween.pageObject.ResultPage;
+import com.iween.pageObject.SearchPage;
 
-public class TC_1_SeartchToBooking extends baseClass {
+public class TC_1_airParadiseSearchToBooking extends baseClass {
 
     @Test(dataProvider = "excelData", dataProviderClass = DataProviders.class, retryAnalyzer = Retry.class)
     public void myTest(Map<String, String> excelTestData) throws Exception {
@@ -66,9 +67,33 @@ public class TC_1_SeartchToBooking extends baseClass {
 
             // Login page object
             LoginPage loginPage = new LoginPage(driver);
-            HomePage SearchPage = new HomePage(driver);
+
+            SearchPage SearchPage = new SearchPage(driver);
+            ResultPage ResultPage = new ResultPage(driver);
+        
+            // Perform login using values from properties file
+            loginPage.UserLogin(p.getProperty("username"), p.getProperty("password"));
+            
+            
+            
+            
+            long startTime = System.currentTimeMillis();
+            loginPage.clickOnSubmitButton();
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+    		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Search Flights']")));
+            long endTime = System.currentTimeMillis();
+    		long loadTimeInSeconds = (endTime - startTime) / 1000;
+    		test.log(Status.INFO, "Flight Home page  loaded in " + loadTimeInSeconds + " seconds");
+            SearchPage.searchFightsOnHomePage(departFrom,goingTo,date30.day,fromMonthYear,adultsCounts,childCount,infantsCount,Class);
+            SearchPage.clickOnSearch(test);
+            ResultPage.selectAirline();
+    		
+            
+
+            
            
    		
+
             logger.info("******** TestCase1: testLogin completed successfully ********");
 
         } catch (Exception e) {

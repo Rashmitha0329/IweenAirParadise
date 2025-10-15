@@ -128,8 +128,9 @@ public class ExcelUtilities {
 	   // C:\Users\LENOVO\eclipse-workspace\AirParadise\src\test\resources\testData\airParadishSearchToBooking.xlsx
 	    String path5="src\\test\\resources\\testData\\airParadishSearchToBooking.xlsx";
 	    String path6="src/test/resources/testdata/airParadishSearchToBooking.xlsx";
-	    String path7="src/test/resources/testdata/AirParadiseClientPanel.xlsx";
-	    try (FileInputStream fis = new FileInputStream(path7);
+
+	    try (FileInputStream fis = new FileInputStream(path6);
+
 	         Workbook workbook = new XSSFWorkbook(fis)) {
  
 	        Sheet sheet = workbook.getSheet(sheetName);

@@ -12,7 +12,11 @@
         <!--parameter name="os" value="Windows" />
         <parameter name="browser" value="chrome" /-->
         <classes>
+<<<<<<< HEAD
+          <class name="com.iween.AirParadiseSearchToBooking.TC_1_airParadiseSearchToBooking"/>
+=======
         <class name="com.iween.AirParadiseClientPanelTestCase.TCCP_1_LogoAppearance"/>
+>>>>>>> 7aef2fd5ea2b0006f7bedd1d0c16b857c8315734
             
         </classes>
     </test>

@@ -8,6 +8,15 @@
   </listeners>
   <test thread-count="3" parallel="classes" name="Onway Tests(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="com.iween.AirParadiseSearchToBooking.TC_1_airParadiseSearchToBooking">
+        <methods>
+          <include name="myTest" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.iween.AirParadiseSearchToBooking.TC_1_airParadiseSearchToBooking -->
+=======
       <class name="com.iween.AirParadiseClientPanelTestCase.TCCP_1_LogoAppearance">
         <methods>
           <include name="setup"/>
@@ -15,6 +24,7 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.iween.AirParadiseClientPanelTestCase.TCCP_1_LogoAppearance -->
+>>>>>>> 7aef2fd5ea2b0006f7bedd1d0c16b857c8315734
     </classes>
   </test> <!-- Onway Tests(failed) -->
 </suite> <!-- Failed suite [iween Test Suite] -->
