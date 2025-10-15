@@ -2,10 +2,10 @@
 <testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-14T13:30:29 IST" name="iween Test Suite" finished-at="2025-10-14T13:30:30 IST" duration-ms="925">
+  <suite started-at="2025-10-14T16:07:56 IST" name="iween Test Suite" finished-at="2025-10-14T16:07:57 IST" duration-ms="690">
     <groups>
     </groups>
-    <test started-at="2025-10-14T13:30:29 IST" name="Onway Tests" finished-at="2025-10-14T13:30:30 IST" duration-ms="925">
-    </test> <!-- Onway Tests -->
+    <test started-at="2025-10-14T16:07:56 IST" name="Onway Client Panel Tests" finished-at="2025-10-14T16:07:57 IST" duration-ms="690">
+    </test> <!-- Onway Client Panel Tests -->
   </suite> <!-- iween Test Suite -->
 </testng-results>
