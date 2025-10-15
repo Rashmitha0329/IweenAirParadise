@@ -12,7 +12,7 @@
         <!--parameter name="os" value="Windows" />
         <parameter name="browser" value="chrome" /-->
         <classes>
-          <class name="com.iween.AirParadiseSearchToBooking.TC_1_airParadiseSearchToBooking"/>
+          <class name="com.iween.AirParadiseSearchToBooking.TC_1_SeartchToBooking"/>
             
         </classes>
     </test>

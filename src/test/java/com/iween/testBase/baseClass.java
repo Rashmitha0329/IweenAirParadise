@@ -214,7 +214,7 @@ public class baseClass {
     public void tearDown() {
         if (driver != null) {
             logger.info("Closing browser.");
-            driver.quit();
+           // driver.quit();
         }
     }
     
