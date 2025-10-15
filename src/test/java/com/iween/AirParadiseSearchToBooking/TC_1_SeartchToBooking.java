@@ -22,7 +22,7 @@ import com.iween.utilities.Iween_FutureDates;
 import com.iween.utilities.Retry;
 import com.iween.utilities.ScreenshotUtil;
 import com.iween.pageObject.LoginPage;
-import com.iween.pageObject.SearchPage;
+import com.iween.pageObject.HomePage;
 
 
 public class TC_1_SeartchToBooking extends baseClass {
@@ -66,7 +66,7 @@ public class TC_1_SeartchToBooking extends baseClass {
 
             // Login page object
             LoginPage loginPage = new LoginPage(driver);
-            SearchPage SearchPage = new SearchPage(driver);
+            HomePage SearchPage = new HomePage(driver);
            
    		
             logger.info("******** TestCase1: testLogin completed successfully ********");

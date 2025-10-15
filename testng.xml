@@ -8,11 +8,11 @@
         <listener class-name="com.iween.utilities.ExtentReportManager" />
     </listeners>
 
-    <test name="Onway Tests">
+    <test name="Onway Client Panel Tests">
         <!--parameter name="os" value="Windows" />
         <parameter name="browser" value="chrome" /-->
         <classes>
-          <class name="com.iween.AirParadiseSearchToBooking.TC_1_SeartchToBooking"/>
+        <class name="com.iween.AirParadiseClientPanelTestCase.TCCP_1_LogoAppearance"/>
             
         </classes>
     </test>

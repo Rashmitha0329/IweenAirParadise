@@ -12,7 +12,8 @@
         <!--parameter name="os" value="Windows" />
         <parameter name="browser" value="chrome" /-->
         <classes>
-          <class name="com.iween.AirParadiseSearchToBooking.TC_1_SeartchToBooking"/>
+           <class name="com.iween.AirParadiseClientPanelTestCase.TCCP_1_LogoAppearance"/>
+            
             
         </classes>
     </test>
