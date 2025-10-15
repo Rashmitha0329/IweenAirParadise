@@ -38,7 +38,7 @@ public class LoginPage extends basePage{
 	@FindBy(xpath="//button[text()='Sign In']")
 	WebElement submit;
 
-	@FindBy(xpath="//img[@src='/images/logos/app_logo.png']")
+	@FindBy(xpath="//img[@class='logo-width']")
 	WebElement imageLogo;
 	
 	public void validateLogoInLoginPage(ExtentTest test) {
@@ -261,5 +261,8 @@ public class LoginPage extends basePage{
 	        Assert.fail();
 	    }
 	}
+ 
+ //------------------------------------
+ 
 
 }
